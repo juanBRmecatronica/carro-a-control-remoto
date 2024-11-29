@@ -1,3 +1,4 @@
+//agregamos las librerias necesarias
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
@@ -57,12 +58,12 @@ void loop() {
      //Leemos los datos y los guardamos en la variable datos[]
      radio.read(datos,sizeof(datos));
      
-     //reportamos por el puerto serial los datos recibidos
+     //reportamos por el puerto serial los datos recibidos (opcional)
     // Serial.print("Dato0= " );
      //Serial.println(datos[0]);
 
       
-
+//designamos la funcion de cada comando recibido del control
     if(datos[0]==1){//adelante
    digitalWrite(STBY,HIGH );
 
