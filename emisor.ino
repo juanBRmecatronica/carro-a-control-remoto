@@ -1,3 +1,4 @@
+//agregamos las librerias necesarias 
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
@@ -35,6 +36,7 @@ radio.setPALevel(RF24_PA_MIN);
  
 void loop()
 { 
+// se realiza el mapeo de un joyStick, que enviará los comandos de movimiento al receptor
  x = analogRead(PIN_VRx);
   y = analogRead(PIN_VRy);
 
